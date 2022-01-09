@@ -1,0 +1,221 @@
+/* :root {
+	--bg-main: hsl(222, 26%, 31%);
+	--kp-main: hsl(223, 31%, 20%);
+	--sc-main: hsl(224, 36%, 15%);
+
+	--key-bg: hsl(225, 21%, 49%);
+	--key-shadow: hsl(224, 28%, 35%);
+	--key-bg2: hsl(6, 63%, 50%);
+	--key-shadow2: hsl(6, 70%, 34%);
+	--key-bg3: hsl(30, 25%, 89%);
+	--key-shadow3: hsl(28, 16%, 65%);
+
+	--txt-main: hsl(221, 14%, 31%);
+	--txt-second: hsl(0, 0%, 100%);
+} */
+
+body {
+	background-color: var(--bg-main);
+	font-family: "Spartan", sans-serif;
+	font-size: 2em;
+	font-weight: 700;
+	color: var(--txt-second);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	line-height: 1.6;
+}
+
+.calculator {
+	display: flex;
+	flex-direction: column;
+}
+
+.info {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.text {
+	padding-top: 0.8em;
+}
+
+.theme-box {
+	font-size: 0.8rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.theme {
+	display: flex;
+	align-items: center;
+	margin-top: 3em;
+	padding-inline: 1.5em;
+}
+
+.toggle-label {
+	display: flex;
+	justify-content: space-around;
+	padding-block: 0.3rem;
+}
+
+.toggle-btn {
+	background-color: var(--kp-main);
+	border-radius: 1.6rem;
+	display: flex;
+}
+
+.toggle-btn input {
+	appearance: none;
+	width: 1.3em;
+	height: 1.3em;
+	margin: 0.4em 0.2em;
+	border: var(--kp-main);
+}
+
+.toggle-btn input:checked {
+	border-radius: 50%;
+	box-shadow: inset 1.1em 1.1em var(--key-bg2);
+}
+
+.display {
+	width: 10em;
+	height: 2.5em;
+	background-color: var(--sc-main);
+	text-align: right;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	border-radius: 0.5rem;
+	padding-top: 1rem;
+	padding-right: 1rem;
+}
+
+.keypad {
+	background-color: var(--kp-main);
+	text-align: center;
+	display: grid;
+	grid-gap: 0.4em;
+	padding: 1.25rem;
+	border-radius: 0.5rem;
+	grid-template-columns: repeat(4, auto);
+	grid-template-areas:
+		"seven eight nine delete"
+		"four five six plus"
+		"one two three minus"
+		"decimal zero divide times"
+		"reset reset equals equals";
+}
+
+.one {
+	grid-area: one;
+}
+.two {
+	grid-area: two;
+}
+.three {
+	grid-area: three;
+}
+.four {
+	grid-area: four;
+}
+.five {
+	grid-area: five;
+}
+.six {
+	grid-area: six;
+}
+.seven {
+	grid-area: seven;
+}
+.eight {
+	grid-area: eight;
+}
+.nine {
+	grid-area: nine;
+}
+.zero {
+	grid-area: zero;
+}
+.decimal {
+	grid-area: decimal;
+}
+.reset {
+	grid-area: reset;
+}
+.equals {
+	grid-area: equals;
+}
+.delete {
+	grid-area: delete;
+}
+.plus {
+	grid-area: plus;
+}
+.minus {
+	grid-area: minus;
+}
+.times {
+	grid-area: times;
+}
+.divide {
+	grid-area: divide;
+}
+
+[data-type="number"] {
+	background-color: var(--key-bg3);
+	color: var(--txt-main);
+	border-radius: 4px;
+	box-shadow: 0 4px 1px var(--key-shadow3);
+}
+[data-type="operator"] {
+	background-color: var(--key-bg3);
+	color: var(--txt-main);
+	border-radius: 4px;
+	box-shadow: 0 4px 1px var(--key-shadow3);
+}
+[data-type="reset"] {
+	background-color: var(--key-bg);
+	color: #ffffff;
+	font-size: 0.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	box-shadow: 0 4px 1px var(--key-shadow);
+}
+[data-type="delete"] {
+	display: flex;
+	background-color: var(--key-bg);
+	color: #ffffff;
+	font-size: 0.5em;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	box-shadow: 0 4px 1px var(--key-shadow);
+}
+[data-type="equals"] {
+	background-color: var(--key-bg2);
+	color: #ffffff;
+	border-radius: 4px;
+	box-shadow: 0 4px 1px var(--key-shadow2);
+}
+
+[data-type="number"],
+[data-type="operator"],
+[data-type="reset"],
+[data-type="equals"],
+[data-type="delete"] {
+	padding-top: 10px;
+}
+
+[data-type="number"]:active,
+[data-type="operator"]:active,
+[data-type="reset"]:active,
+[data-type="equals"]:active,
+[data-type="delete"]:active {
+	transform: translateY(5px);
+	box-shadow: none;
+}

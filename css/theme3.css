@@ -1,0 +1,16 @@
+:root {
+	/* theme3 */
+	--bg-main: hsl(268, 75%, 9%);
+	--kp-main: hsl(268, 71%, 12%);
+	--sc-main: hsl(268, 71%, 12%);
+
+	--key-bg: hsl(281, 89%, 26%);
+	--key-shadow: hsl(285, 91%, 52%);
+	--key-bg2: hsl(176, 100%, 44%);
+	--key-shadow2: hsl(177, 92%, 70%);
+	--key-bg3: hsl(268, 47%, 21%);
+	--key-shadow3: hsl(290, 70%, 36%);
+
+	--txt-main: hsl(52, 100%, 62%);
+	--txt-second: hsl(52, 100%, 62%);
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" id="themesetter" href="css/theme1.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>Calculator</title>
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<div class="calculator">
+					<div class="info">
+						<div class="text">calc</div>
+						<div class="theme-box">
+							<div class="theme">THEME</div>
+							<div class="toggle">
+								<div class="toggle-label">
+									<label for="theme1">1</label>
+									<label for="theme2">2</label>
+									<label for="theme3">3</label>
+								</div>
+								<div class="toggle-btn">
+									<input
+										type="radio"
+										id="theme1"
+										name="toggle"
+										value="1"
+										checked="checked"
+									/>
+									<input type="radio" id="theme2" name="toggle" value="2" />
+									<input type="radio" id="theme3" name="toggle" value="3" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="display">0</div>
+					<div class="keypad">
+						<div data-type="number" class="btn one">1</div>
+						<div data-type="number" class="btn two">2</div>
+						<div data-type="number" class="btn three">3</div>
+						<div data-type="number" class="btn four">4</div>
+						<div data-type="number" class="btn five">5</div>
+						<div data-type="number" class="btn six">6</div>
+						<div data-type="number" class="btn seven">7</div>
+						<div data-type="number" class="btn eight">8</div>
+						<div data-type="number" class="btn nine">9</div>
+						<div data-type="number" class="btn zero">0</div>
+						<div data-type="number" class="btn decimal">.</div>
+						<div data-type="delete" class="btn delete">D</div>
+						<div data-type="operator" data-key="plus" class="btn plus">+</div>
+						<div data-type="operator" data-key="minus" class="btn minus">-</div>
+						<div data-type="operator" data-key="times" class="btn times">
+							&times;
+						</div>
+						<div data-type="operator" data-key="divide" class="btn divide">
+							/
+						</div>
+						<div data-type="equals" class="btn equals">=</div>
+						<div data-type="reset" class="btn reset">RESET</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script src="js/index.js"></script>
+	</body>
+</html>
